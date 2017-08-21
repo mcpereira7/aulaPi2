@@ -3,21 +3,23 @@ import java.util.Scanner;
 
 public class Exercicio2 {
 
-    public static int lerNumero() {
+    public static String lerNumero() {
         Scanner sc = new Scanner(System.in);
-        int numero = -1;
-        String valor;
-        System.out.print("Digite um número Inteiro Positivo: ");
-        valor = sc.nextLine();
-        numero = Integer.parseInt(valor);
-        if (!valor.matches("[0-9][" + valor.length() + "]")) {
-            do {
-                System.out.print("Digite um número Inteiro Positivo: ");
-                valor = sc.nextLine();
-                numero = Integer.parseInt(valor);
-            } while (numero < 0);
-        }
+        String numero;
 
+        System.out.print("Digite um número Inteiro Positivo: ");
+        numero = sc.nextLine();
+
+        return numero;
+    }
+    public static int validarNumero(String numeroNaoValidado){
+        int numero=0;
+        if (numeroNaoValidado.matches("[0-9]{"+numeroNaoValidado.length()+"}")){
+            numero= Integer.parseInt(numeroNaoValidado);
+        } else{
+            System.out.println("Valor digitado é inválido!");
+        }
+            
         return numero;
     }
 
@@ -32,27 +34,33 @@ public class Exercicio2 {
     public static String verificaPrimo(int numero) {
         int divisor = 1,
                 contador = 0;
-        String ehPrimo = "Não é Primo";
+        String ehPrimo = "NÃO é número Primo";
 
-        if (numero == 2) {
+        /*if (numero == 2) {
             ehPrimo = "É Primo";
-        }
+        }*/
         while (divisor <= numero) {
             if (numero % divisor == 0) {
                 contador++;
             }
-
+            divisor++;
         }
         if (contador == 2) {
-            ehPrimo = "É Primo";
+            ehPrimo = "é número Primo";
         }
         return ehPrimo;
     }
 
     public static void main(String[] args) {
-        int numero = lerNumero();
+        String numeroNaoValidado = lerNumero();
+        int numero = validarNumero(numeroNaoValidado);
+        if(numero>0){
         String parOuImpar = validarParImpar(numero);
         String ehPrimo = verificaPrimo(numero);
-        System.out.println(numero + " " + parOuImpar + " e " + ehPrimo);
+        System.out.println(numero + " é um número " + parOuImpar + "\ne " + ehPrimo);
+        }else{
+            System.out.println("Tente novamente!");
+        }
+        
     }
 }
