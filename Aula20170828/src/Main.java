@@ -15,11 +15,13 @@ import javax.swing.SwingUtilities;
 public class Main {
 
     public static void main(String[] args) {
+        // criando a thread que vai rodar o CriarGUI
         Runnable thread = new Runnable() {
             public void run() {
                 criarGUI();
             }
         };
+        // chamando a thread criada acima
         SwingUtilities.invokeLater(thread);
     }
 
