@@ -49,6 +49,7 @@ public class Exercicio10 {
 
         matrizA = populaMatriz(matrizA);
         matrizB = populaMatriz(matrizB);
+        matrizResultadoSomaMatriz=somaMatriz(matrizA,matrizB,matrizResultadoSomaMatriz);
         System.out.println("Matriz A");
         for (int i = 0; i < matrizA.length; i++) {
             for (int j = 0; j < matrizA[i].length; j++) {
