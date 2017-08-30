@@ -24,7 +24,7 @@ public class Exercicio10 {
         System.out.println("Popula Matriz");
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[i].length; j++) {
-                matriz[i][j] = rd.nextInt(100+1) ;
+                matriz[i][j] = rd.nextInt(10);
 
             }
         }
@@ -53,18 +53,27 @@ public class Exercicio10 {
         for (int i = 0; i < matrizA.length; i++) {
             for (int j = 0; j < matrizA[i].length; j++) {
 
-                System.out.printf("\t" + matrizA);
+                System.out.printf("\t" + matrizA[i][j]);
             }
             System.out.println("");
         }
         System.out.println("\n####################################################");
+        System.out.println("Matriz A");
+        for (int i = 0; i < matrizB.length; i++) {
+            for (int j = 0; j < matrizB[i].length; j++) {
 
-        System.out.println("Matriz B");
-        System.out.printf("\t" + matrizB);
+                System.out.printf("\t" + matrizB[i][j]);
+            }
+            System.out.println("");
+        }
         System.out.println("\n####################################################");
         System.out.println("Soma dos valores das Matrizes A e B");
-        System.out.printf("\t" + matrizResultadoSomaMatriz);
-        System.out.println("");
+        for (int i = 0; i < matrizResultadoSomaMatriz.length; i++) {
+            for (int j = 0; j < matrizResultadoSomaMatriz[i].length; j++) {
 
+                System.out.printf("\t" + matrizResultadoSomaMatriz[i][j]);
+            }
+            System.out.println("");
+        }
     }
 }
