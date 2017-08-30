@@ -24,7 +24,7 @@ public class Exercicio10 {
         System.out.println("Popula Matriz");
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[i].length; j++) {
-                matriz[i][j] = rd.nextInt(10);
+                matriz[i][j] = rd.nextInt(100);
 
             }
         }
@@ -59,7 +59,7 @@ public class Exercicio10 {
             System.out.println("");
         }
         System.out.println("\n####################################################");
-        System.out.println("Matriz A");
+        System.out.println("Matriz B");
         for (int i = 0; i < matrizB.length; i++) {
             for (int j = 0; j < matrizB[i].length; j++) {
 
