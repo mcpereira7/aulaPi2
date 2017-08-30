@@ -38,7 +38,15 @@ public class Exercicio9 {
                 for (int i = 0; i < 2; i++) {
                     for (int j = 0; j < 5; j++) {
                         System.out.printf("Infome a aula do %d horário de %s: ", (i + 1), agendaSemanal[0][j]);
+                        if(sc.nextLine().equalsIgnoreCase("sair")){
+                            exit=true;
+                            break;
+                        }
                         agendaSemanal[i + 1][j] = sc.nextLine();
+                        
+                    }
+                    if(exit){
+                        break;
                     }
                     System.out.println("");
                 }
